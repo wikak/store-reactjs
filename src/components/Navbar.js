@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import logo from '../logo.svg'
 import styled from 'styled-components'
+import { ButtonContainer } from './Buttons'
 export default class Navbar extends Component {
     render = () => {
         return (
-          <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-sm-5">
+          <NavWrapper className="navbar navbar-expand-lg navbar-dark bg-dark px-sm-5">
             <Link to='/'>
               {/*https://image.flaticon.com/icons/svg/126/126122.svg*/}
               <img src={logo} alt="my store"  className="navbar-brand"/>
@@ -29,23 +30,13 @@ export default class Navbar extends Component {
                 </ButtonContainer>
               </Link>
             </div>
-          </nav>
+          </NavWrapper>
         )
     }
 }
-const ButtonContainer = styled.button`
-text-transform: capitalize;
-font-size:1.4rem;
-background-color:transparent;
-border-radius: 25px;
-padding: 0.2rem 0.5rem;
-cursor: pointer;
-transition: all 0.5s ease-in-out;
-&:hover {
-  background:var(--lightBlue);
-  color:var(--mainBlue)
-}
-&:focus {
-  outline: none
-}
-`;
+
+const NavWrapper = styled.nav`
+  .nav-link {
+    text-transform: capitalize;
+  }
+`

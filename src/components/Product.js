@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { ProductConsumer } from '../context'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types'
 
 export default class Product extends Component {
     render() {
@@ -52,7 +53,15 @@ export default class Product extends Component {
         );
     }
 }
-
+Product.propTypes = {
+    product: PropTypes.shape({
+        id:PropTypes.number,
+        img:PropTypes.string,
+        title:PropTypes.string,
+        price:PropTypes.number,
+        inCart:PropTypes.bool,
+    }).isRequired
+}
 const ProductWrapper = styled.div`
     .card {
         border-color: transparent;

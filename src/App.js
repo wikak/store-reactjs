@@ -27,18 +27,3 @@ class App extends Component {
 }
 
 export default App;
-
-/**
- *
- *
- <div className="container">
-      <div className="row">
-        <div className="col-lg-6">
-          column number one
-        </div>
-        <div className="col-lg-6">
-        <FontAwesomeIcon icon={faHome} />
-        </div>
-      </div>
-    </div>
- */
